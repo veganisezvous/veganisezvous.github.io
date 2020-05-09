@@ -1,0 +1,177 @@
+* {
+	box-sizing: border-box;
+	font-family: var(--main-font);
+}
+
+html,
+body {
+	height : 100%;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing                  : border-box;
+	font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+	-ms-overflow-style          : scrollbar;
+	-webkit-tap-highlight-color : transparent;
+	font-family                 : sans-serif;
+	-ms-text-size-adjust        : 100%;
+}
+
+body {
+	font-family             : Montserrat, sans-serif;
+	-webkit-font-smoothing  : antialiased;
+	-moz-osx-font-smoothing : grayscale;
+	line-height             : 1.25em;
+	font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+	color: var(--main-color);
+	/*min-height: 100vh;*/
+	display: flex;
+	flex-direction: column;
+}
+
+p {
+	margin-top    : 0;
+	margin-bottom : 1rem;
+	font-size     : calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));;
+	font-weight   : 400;
+}
+
+ol, ul {
+	margin-bottom : 1rem
+}
+
+ol, ul {
+	margin-top : 0
+}
+
+ol ol, ol ul, ul ol, ul ul {
+	margin-bottom : 0
+}
+
+ul {
+	list-style : none;
+	padding    : 0;
+	margin     : 0;
+}
+
+blockquote {
+	margin : 0 0 1rem
+}
+
+a {
+	color           : var(--green-color);
+	text-decoration : none;
+	transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+	color           : #000;
+	text-decoration : none;
+}
+
+a:focus {
+	color           : #208094;
+	text-decoration : underline;
+	outline         : 5px auto -webkit-focus-ring-color;
+	outline-offset  : -2px
+}
+
+figure {
+	margin : 0 0 1rem
+}
+
+img {
+	vertical-align : middle;
+	max-width      : 100%;
+	object-fit     : contain;
+}
+
+button {
+	cursor : pointer;
+}
+
+button, a, area, button, input, label, select, summary, textarea {
+	-ms-touch-action : manipulation;
+	touch-action     : manipulation
+}
+
+caption {
+	padding-top    : .75rem;
+	padding-bottom : .75rem;
+	color          : #7a7a7a;
+	caption-side   : bottom
+}
+
+caption, th {
+	text-align : left
+}
+
+label {
+	display       : inline-block;
+	margin-bottom : .5rem
+}
+
+button:focus {
+	outline : 1px dotted;
+}
+
+button, input, select, textarea {
+	line-height : inherit
+}
+
+input[type=checkbox]:disabled, input[type=radio]:disabled {
+	cursor : not-allowed;
+}
+
+input[type=date], input[type=datetime-local], input[type=month], input[type=time] {
+	-webkit-appearance : listbox
+}
+
+textarea {
+	resize : vertical
+}
+
+fieldset {
+	min-width : 0;
+	padding   : 0;
+	margin    : 0;
+	border    : 0
+}
+
+legend {
+	display       : block;
+	width         : 100%;
+	padding       : 0;
+	margin-bottom : .5rem;
+	font-size     : 1.5rem;
+	line-height   : inherit
+}
+
+input[type=search] {
+	-webkit-appearance : none
+}
+
+output {
+	display : inline-block
+}
+
+[hidden] {
+	display : none !important;
+}
+
+.h1, .h2, .h3 {
+	text-transform : uppercase;
+	color          : #232323
+}
+
+.h4 {
+	font-weight : 700;
+	color       : #232323
+}
+
+section.main,
+footer {
+	flex: 1;
+}
