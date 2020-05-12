@@ -70,9 +70,136 @@
 	object-fit: contain;
 }
 
-
 /*FOOTER*/
 
 footer#footer {
 	background: var(--green-color);
+	padding: 2em 0;
 }
+
+.footer__links {
+	max-width: 50%;
+	margin: auto;
+}
+
+.footer__links ul {
+	display: flex;
+	justify-content: center;
+}
+
+.footer__links ul li:not(:last-of-type) {
+	margin-right: 1em;
+}
+
+.footer__links li {
+	border:none;
+	position: relative;
+	line-height: 30px;
+	width: fit-content;
+}
+
+.footer__links li:hover {
+	border-bottom: none;
+}
+
+.footer__links li:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	left: 50%;
+	bottom:0;
+	background-color: #2A958A;
+	transition: all .2s cubic-bezier(.17,.67,.83,.67);
+}
+
+.footer__links li:hover:after{
+	width: 100%;
+	left: 0;
+}
+
+.footer__links a {
+	color: #000;
+}
+
+.footer__links a:hover {
+	color: #2A958A;
+}
+
+.footer__copyright {
+	display: flex;
+	justify-content: center;
+	padding: 1em 0;
+}
+
+/*///////////////////////////////// HOME /////////////////////////////////*/
+
+/*TOP SECTION*/
+
+body#index .top__section__wrapper {
+	background: url(../img/bg_carrots.jpg) no-repeat;
+	background-size: cover;
+	padding: 8em 0;
+}
+
+body#index .top__section__wrapper h1 {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
+}
+
+body#index .top__section__wrapper span {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+
+/*INFOS*/
+
+.infos__wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	padding: 5em 0;
+}
+
+.infos__wrapper a {
+	color: #000;
+	transition: all 0.3s ease-in-out;
+}
+
+.infos__wrapper a:hover {
+	color: #2A958A;
+}
+
+.infos__container {
+	position: relative;
+}
+
+.infos__title	{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+	background: rgba(148, 233, 224, 0.75);
+	padding: 0.75em 3em;
+}
+
+.instagram__wrapper {
+	margin-right: 3em;
+}
+
+.blogs__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+

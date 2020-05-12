@@ -173,5 +173,10 @@ output {
 
 section.main,
 footer {
-	flex: 1;
+	/*flex: 1;*/
+	flex: 0 0 auto;
+}
+
+footer {
+	min-height: 80px;
 }
