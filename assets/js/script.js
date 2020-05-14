@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+	new accordions();
+
 	paddingTopWrapper();
 
 	const burger = $('.burger');
@@ -19,18 +21,18 @@ $(document).ready(function () {
 
 function paddingTopWrapper() {
 
-	const body = $('body#index');
-	const wrapper = $('.main');
-	const header = $('header').height();
+	const body = $('body');
+	const wrapper = $('section.main');
+	const header = $('header').innerHeight();
 
-	if (window.matchMedia("(min-width : 1024)").matches) {
+	// if (window.matchMedia("(min-width : 1024px)").matches) {
 		if (body.length) {
 			wrapper.css('padding-top' , header + 'px');
 		}
 		else {
 			wrapper.css('padding-top' , 0);
 		}
-	}
+	// }
 
 
 

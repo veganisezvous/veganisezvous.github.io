@@ -6,9 +6,11 @@
 
 	--main-color : #384b63;
 	--green-color : #94E9E0;
+	--dark-green-color : #2A958A;
 
 	/*FONTS*/
 
-	--main-font : 'Muli', sans-serif;
+	--main-font : 'Comfortaa', cursive;
+	/*--main-font : 'Muli', sans-serif;*/
 
 }

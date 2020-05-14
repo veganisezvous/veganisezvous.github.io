@@ -1,6 +1,12 @@
 
 @media (min-width : 768px) {
 
+	/*STYLE COMMUN*/
+
+	.top__section__wrapper {
+		padding: 6em 0;
+	}
+
 	/*INFOS*/
 
 	.infos__wrapper {

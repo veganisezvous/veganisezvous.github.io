@@ -1,0 +1,62 @@
+.js-accordion__container {
+  border: 1px solid #eee;
+  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, .1);
+}
+
+.js-accordion__container + .js-accordion__container {
+  margin-top: 15px;
+}
+
+.js-accordion__container .accordion__title {
+  font-weight: 700;
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+  transition: all .3s ease-out;
+  color: black;
+  /*border-bottom: 1px solid rgba(0, 0, 0, .1);*/
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.js-accordion__container .accordion__title:hover {
+  color: #3CD1C1;
+}
+
+.js-accordion__container .accordion__title.--is-active {
+  color: #3CD1C1;
+  background: #ecf0f1;
+}
+
+.accordion__title:focus {
+  outline: 0;
+}
+
+.js-accordion__container .accordion__content {
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: all .3s ease-out;
+  pointer-events: none;
+}
+
+.js-accordion__container .accordion__content .accordion__content__inner {
+  padding: 15px;
+  pointer-events: all;
+}
+
+.js-accordion__container .accordion__content .accordion__content-preview__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .5s ease-out;
+  background: linear-gradient(rgba(255, 255, 255, .2), white);
+}
+
+.js-accordion__container .accordion__content.--is-active .accordion__content-preview__overlay {
+  background: rgba(255, 255, 255, 0);
+}
