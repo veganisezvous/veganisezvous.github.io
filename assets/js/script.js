@@ -1,6 +1,10 @@
 $(document).ready(function () {
 
-	new accordions();
+	if ($("body").is("#crueltyfree")) {
+
+		new accordions();
+
+	}
 
 	paddingTopWrapper();
 
