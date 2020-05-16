@@ -316,19 +316,22 @@ body#index .top__section__wrapper {
 }
 
 
+/*///////////////////////////////// STYLE COMMNU INFOS COMMUN /////////////////////////////////*/
+
+.infos__pages {
+	display: flex;
+	flex-direction: column;
+	max-width: 70%;
+	margin: auto;
+	padding: 5em 0;
+}
+
 /*///////////////////////////////// CRUELTY FREE /////////////////////////////////*/
 
 body#crueltyfree .top__section__wrapper {
 	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../img/rabbit.jpg) no-repeat;
 	background-size: cover;
 	background-position: 15% 65%;
-}
-
-body#crueltyfree .infos__wrapper {
-	display: flex;
-	flex-direction: column;
-	max-width: 80%;
-	margin: auto;
 }
 
 .wrapper__button {
@@ -356,4 +359,41 @@ body#crueltyfree .infos__wrapper {
 .wrapper__button .btn-download:hover {
 	background-size: 100% 0,auto;
 	color: #3CD1C1;
+}
+
+/*///////////////////////////////// GUIDE /////////////////////////////////*/
+
+body#guide .top__section__wrapper {
+	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../img/renard.jpg) no-repeat;
+	background-size: cover;
+	background-position: 15% 50%;
+}
+
+.infos__content ul li {
+	line-height: 1.5em;
+}
+
+.infos__content ul li:not(:last-of-type) {
+	margin-bottom: 1.5em;
+}
+
+svg.svg-inline--fa.fa-chevron-right.fa-w-8 {
+	vertical-align: middle;
+}
+
+body#guide .wrapper__button {
+	padding-top: 2em;
+	display: flex;
+	justify-content: center;
+}
+
+.contact__wrapper {
+	background: #fff;
+	border-radius: 15px;
+	box-shadow:
+			-4px -4px 7px rgba(255, 255, 255, 0.35),
+			3px 3px 10px rgba(94, 104, 121, 0.28);
+	width: 70%;
+	margin: auto;
+	padding: 5em;
 }
