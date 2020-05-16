@@ -1,10 +1,19 @@
 
+
 @media (min-width : 768px) {
 
 	/*STYLE COMMUN*/
 
 	.top__section__wrapper {
 		padding: 6em 0;
+	}
+
+	.infos__pages h2 {
+		text-align: left;
+	}
+
+	.wrapper__button {
+		justify-content: flex-start;
 	}
 
 	/*INFOS*/
@@ -29,30 +38,52 @@
 		display: none;
 	}
 
+	/*///////////////////////////////// CONTACT /////////////////////////////////*/
+
+	.contact__wrapper {
+		width: 70%;
+	}
+
+	/*FOOTER */
+
+	.footer__links ul {
+		flex-direction: row;
+	}
+
+	.footer__links ul li:not(:last-of-type) {
+		margin-right: 1em;
+	}
+
+
 }
+
+@media (min-width : 1024px) {
+
+	/*///////////////////////////////// STYLE COMMUN INFOS /////////////////////////////////*/
+
+	.infos__pages {
+		max-width: 70%;
+	}
+
+}
+
+
 
 @media (min-width : 1200px) {
 
 	/*HEADER*/
 
-	/*header {*/
-	/*	position: fixed;*/
-	/*	z-index: 5;*/
-	/*	top: 0;*/
-	/*	background: white;*/
-	/*	width: 100%;*/
-	/*}*/
-
 	.header__wrapper {
 		display: grid;
-		grid-template-columns: 1fr 20% 60% 1fr;
-		box-shadow: 0px 2px 3px 0px #00000012;
+		grid-template-columns: 1fr 20% 50% 1fr;
+		box-shadow: 0 2px 3px 0 #00000012;
 	}
 
 	.logo__wrapper {
 		grid-column: 2/3;
 		display: flex;
 		justify-content: center;
+		padding: 0.5em 0;
 	}
 
 	.burger,

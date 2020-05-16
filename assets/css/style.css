@@ -5,6 +5,7 @@ header {
 	z-index: 5;
 	top: 0;
 	background: white;
+	box-shadow: 0px 2px 3px 0px #00000012;
 	width: 100%;
 }
 
@@ -148,6 +149,10 @@ header {
 	display: inline-block;
 }
 
+.nav__wrapper.--is-active ul li a:hover {
+	color: var(--dark-green-color);
+}
+
 .close {
 	display: flex;
 	justify-content: flex-end;
@@ -160,72 +165,14 @@ header {
 	color: var(--dark-green-color);
 }
 
+.logo__wrapper {
+	padding: 0.5em 0 0.5em 0.5em;
+}
+
 .logo__wrapper img {
 	max-width: 30%;
 	height: auto;
 	object-fit: contain;
-}
-
-/*FOOTER*/
-
-footer#footer {
-	background: var(--green-color);
-	padding: 2em 0;
-}
-
-.footer__links {
-	max-width: 90%;
-	margin: auto;
-}
-
-.footer__links ul {
-	display: flex;
-	justify-content: center;
-}
-
-.footer__links ul li:not(:last-of-type) {
-	margin-right: 1em;
-}
-
-.footer__links li {
-	border:none;
-	position: relative;
-	line-height: 30px;
-	width: fit-content;
-}
-
-.footer__links li:hover {
-	border-bottom: none;
-}
-
-.footer__links li:after{
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 1px;
-	left: 50%;
-	bottom:0;
-	background-color: var(--dark-green-color);
-	transition: all .2s cubic-bezier(.17,.67,.83,.67);
-}
-
-.footer__links li:hover:after{
-	width: 100%;
-	left: 0;
-}
-
-.footer__links a {
-	color: #000;
-}
-
-.footer__links a:hover {
-	color: var(--dark-green-color);
-}
-
-.footer__copyright {
-	display: flex;
-	justify-content: center;
-	padding: 1em 0;
 }
 
 /*///////////////////////////////// STYLE COMMUN /////////////////////////////////*/
@@ -238,7 +185,7 @@ footer#footer {
 	display: flex;
 	justify-content: center;
 	color: white;
-	font-size: calc(35px + (70 - 35) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
 	text-align: center;
 	line-height: 1.2em;
 }
@@ -247,10 +194,10 @@ footer#footer {
 	display: flex;
 	justify-content: center;
 	color: white;
-	font-size: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
 
-/*///////////////////////////////// HOME /////////////////////////////////*/
+/*///////////////////////////////// HOMEPAGE /////////////////////////////////*/
 
 /*TOP SECTION*/
 
@@ -316,14 +263,20 @@ body#index .top__section__wrapper {
 }
 
 
-/*///////////////////////////////// STYLE COMMNU INFOS COMMUN /////////////////////////////////*/
+/*///////////////////////////////// STYLE COMMUN INFOS /////////////////////////////////*/
 
 .infos__pages {
 	display: flex;
 	flex-direction: column;
-	max-width: 70%;
+	max-width: 95%;
 	margin: auto;
 	padding: 5em 0;
+}
+
+
+.infos__pages h2 {
+	text-align: center;
+	line-height: 1.5em;
 }
 
 /*///////////////////////////////// CRUELTY FREE /////////////////////////////////*/
@@ -335,6 +288,8 @@ body#crueltyfree .top__section__wrapper {
 }
 
 .wrapper__button {
+	display: flex;
+	justify-content: center;
 	padding-top: 2em;
 }
 
@@ -354,11 +309,13 @@ body#crueltyfree .top__section__wrapper {
 	overflow: hidden;
 	padding: .7em;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .wrapper__button .btn-download:hover {
 	background-size: 100% 0,auto;
 	color: #3CD1C1;
+	text-align: center;
 }
 
 /*///////////////////////////////// GUIDE /////////////////////////////////*/
@@ -387,13 +344,94 @@ body#guide .wrapper__button {
 	justify-content: center;
 }
 
+/*///////////////////////////////// CONTACT /////////////////////////////////*/
+
 .contact__wrapper {
 	background: #fff;
 	border-radius: 15px;
-	box-shadow:
-			-4px -4px 7px rgba(255, 255, 255, 0.35),
-			3px 3px 10px rgba(94, 104, 121, 0.28);
-	width: 70%;
+	background: linear-gradient(145deg, #F4FBFA, #ffffff);
+	box-shadow:  7px 7px 14px #e6e6e6,
+	-7px -7px 14px #ffffff;
+	width: 95%;
 	margin: auto;
 	padding: 5em;
+}
+
+body#contact .top__section__wrapper {
+	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../img/butterfly.jpg) no-repeat;
+	background-size: cover;
+	background-position: 15% 70%;
+}
+
+/*///////////////////////////////// CREDITS /////////////////////////////////*/
+
+body#credits .top__section__wrapper {
+	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../img/bird.jpg) no-repeat;
+	background-size: cover;
+	background-position: 15% 75%;
+}
+
+body#credits ul.credit__links a {
+	color: #86D1C9;
+}
+
+
+/*FOOTER*/
+
+footer#footer {
+	background: var(--green-color);
+	padding: 2em 0;
+}
+
+.footer__links {
+	max-width: 90%;
+	margin: auto;
+}
+
+.footer__links ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__links li {
+	border:none;
+	position: relative;
+	line-height: 30px;
+	width: fit-content;
+}
+
+.footer__links li:hover {
+	border-bottom: none;
+}
+
+.footer__links li:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	left: 50%;
+	bottom:0;
+	background-color: var(--dark-green-color);
+	transition: all .2s cubic-bezier(.17,.67,.83,.67);
+}
+
+.footer__links li:hover:after{
+	width: 100%;
+	left: 0;
+}
+
+.footer__links a {
+	color: #000;
+}
+
+.footer__links a:hover {
+	color: var(--dark-green-color);
+}
+
+.footer__copyright {
+	display: flex;
+	justify-content: center;
+	padding: 1em 0;
 }
